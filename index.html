@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EventNest – Personal Event Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      background-color: #4B0082;
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 60px 0;
+      text-align: center;
+      background-color: #e6e6fa;
+    }
+
+    .btn-purple {
+      background-color: #4B0082;
+      color: #fff;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .btn-purple:hover {
+      background-color: #360061;
+      transform: scale(1.05);
+    }
+
+    input, textarea {
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #4B0082;
+      box-shadow: 0 0 5px rgba(75, 0, 130, 0.5);
+    }
+
+    .event-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .event-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">EventNest</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-5">Plan Your Events Seamlessly</h1>
+      <p class="lead">Add and manage your personal events easily.</p>
+      <a href="#addEventForm" class="btn btn-purple mt-3">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Event Form -->
+  <section id="addEventForm" class="container my-5">
+    <div class="card p-4 shadow-sm">
+      <h4 class="mb-3">Add New Event</h4>
+      <form>
+        <div class="mb-3">
+          <label for="eventName" class="form-label">Event Name</label>
+          <input type="text" class="form-control" id="eventName" required>
+        </div>
+        <div class="mb-3">
+          <label for="eventDate" class="form-label">Event Date</label>
+          <input type="date" class="form-control" id="eventDate" required>
+        </div>
+        <div class="mb-3">
+          <label for="eventDesc" class="form-label">Description</label>
+          <textarea class="form-control" id="eventDesc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-purple">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Static Event Cards (Example Preview) -->
+  <section class="container mb-5">
+    <h4 class="mb-4">Upcoming Events</h4>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card event-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Birthday Celebration</h5>
+            <h6 class="card-subtitle mb-2 text-muted">2025-07-10</h6>
+            <p class="card-text">Planning a surprise birthday event with close friends and family.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card event-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">College Farewell</h5>
+            <h6 class="card-subtitle mb-2 text-muted">2025-08-15</h6>
+            <p class="card-text">Organizing our college farewell party and capturing memories.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card event-card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Project Presentation</h5>
+            <h6 class="card-subtitle mb-2 text-muted">2025-09-01</h6>
+            <p class="card-text">Final project presentation for EventNest to the faculty panel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 EventNest by G. Santhiya. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
